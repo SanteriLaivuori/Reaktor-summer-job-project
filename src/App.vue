@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// import emission from "@/assets/emission.csv";
 import axios from "axios";
 
 export default {
@@ -14,19 +13,15 @@ export default {
   async created() {
     const jsonArray = await axios
       .get(
-        "https://cors-anywhere.herokuapp.com/http://snowcoding.com/reaktor/emission.csv"
+        "https://cors-anywhere.herokuapp.com/https://www.dropbox.com/sh/04nb6vkzf68hg6o/AAB5NWERzvScgupUPmKMzRM5a?dl=0/emission.csv"
       )
       .then(result => result.data);
     console.log(jsonArray);
   }
 };
+
 </script>
 
 <style>
-.app {
-  background-image: url("https://fw-d7-freedomworks-org.s3.amazonaws.com/field/image/70250513-factory-wallpapers.jpg");
-  background-position: center;
-  background-size: cover;
 
-}
 </style>
